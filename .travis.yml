@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t freshanthony/docker-react -f Docerfile.dev .
+  - docker build -t freshanthony/docker-react -f Dockerfile.dev .
 
 script:
   - docker run freshanthony/docker-react npm run test -- --coverage
