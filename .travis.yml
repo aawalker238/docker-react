@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t freshanthony/docker-react -f Docerfile.dev .
+
+script:
+  - docker run freshanthony/docker-react npm run test -- --coverage
